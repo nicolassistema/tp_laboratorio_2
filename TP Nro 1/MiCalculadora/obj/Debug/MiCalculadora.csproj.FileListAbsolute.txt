@@ -1,0 +1,10 @@
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
