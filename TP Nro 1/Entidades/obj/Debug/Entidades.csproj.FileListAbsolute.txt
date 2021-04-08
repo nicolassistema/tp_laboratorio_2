@@ -1,2 +1,6 @@
 C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
 C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\bin\Debug\Entidades.dll
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\bin\Debug\Entidades.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\obj\Debug\Entidades.dll
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Entidades\obj\Debug\Entidades.pdb

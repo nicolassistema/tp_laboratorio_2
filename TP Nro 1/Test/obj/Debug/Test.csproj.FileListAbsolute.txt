@@ -1,0 +1,10 @@
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\bin\Debug\Test.exe.config
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\bin\Debug\Test.exe
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\bin\Debug\Test.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\bin\Debug\Entidades.dll
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\bin\Debug\Entidades.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\obj\Debug\Test.csproj.CopyComplete
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\obj\Debug\Test.exe
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\Test\obj\Debug\Test.pdb

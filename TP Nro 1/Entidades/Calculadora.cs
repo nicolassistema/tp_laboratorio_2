@@ -33,40 +33,31 @@ namespace Entidades
 
 
 
-        public static double Operar(Numero num1, Numero num2, string operador)
-        {
+        //public static double Operar(Numero num1, Numero num2, string operador)
+        //{
+        //    double resultado;
 
-            double resultado;
-
-
-
-
-            switch (operador)
-            {
-                case "+":
-                    resultado = num1+num2;
-                    break;
-                case "-":
-                    return Char.ToString(operador);
-                    break;
-                case "*":
-                    return Char.ToString(operador);
-                    break;
-                case "/":
-                    return Char.ToString(operador);
-                    break;
-                default:
-                    return Char.ToString('+');
-                    break;
-            }
-
-
-
-            //double resultado = num1 Convert.ToOperator(operador) num2;
-
-
-            return;
-        }
+        //    switch (operador)
+        //    {
+        //        case "+":
+        //            resultado = num1+num2;
+        //            break;
+        //        case "-":
+        //            return Char.ToString(operador);
+        //            break;
+        //        case "*":
+        //            return Char.ToString(operador);
+        //            break;
+        //        case "/":
+        //            return Char.ToString(operador);
+        //            break;
+        //        default:
+        //            return Char.ToString('+');
+        //            break;
+        //    }
+        //    //double resultado = num1 Convert.ToOperator(operador) num2;
+        //    return;
+        //}
 
 
 
