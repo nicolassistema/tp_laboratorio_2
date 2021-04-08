@@ -8,3 +8,6 @@ C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.csproj
 C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.pdb
 C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\bin\Debug\Entidades.dll
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\bin\Debug\Entidades.pdb
+C:\GITHUB\tp_laboratorio_2\TP Nro 1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete

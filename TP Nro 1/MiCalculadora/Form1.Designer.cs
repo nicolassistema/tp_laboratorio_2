@@ -42,13 +42,15 @@ namespace MiCalculadora
             // 
             // lblResultado
             // 
-            this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(344, 9);
+            this.lblResultado.Location = new System.Drawing.Point(366, 9);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(85, 29);
+            this.lblResultado.Padding = new System.Windows.Forms.Padding(0, 0, 380, 0);
+            this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblResultado.Size = new System.Drawing.Size(407, 29);
             this.lblResultado.TabIndex = 0;
-            this.lblResultado.Text = "label1";
+            this.lblResultado.Text = "0";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNumero1
             // 
@@ -88,6 +90,7 @@ namespace MiCalculadora
             this.btnOperar.TabIndex = 4;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // btnLimpiar
             // 
@@ -97,6 +100,7 @@ namespace MiCalculadora
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCerrar
             // 
@@ -106,6 +110,7 @@ namespace MiCalculadora
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnConvertirABinario
             // 
@@ -130,6 +135,7 @@ namespace MiCalculadora
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 198);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnConvertirADecimal);
             this.Controls.Add(this.btnConvertirABinario);
             this.Controls.Add(this.btnCerrar);
@@ -138,7 +144,6 @@ namespace MiCalculadora
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
-            this.Controls.Add(this.lblResultado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

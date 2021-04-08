@@ -52,29 +52,90 @@ namespace Entidades
         }
 
 
-        public static string BinarioDecimal(string binario)
+
+
+        public static bool EsBinario(string binario)
         {
+            char[] array = binario.ToCharArray();
             int contador = 0;
-            foreach (var item in binario)
+
+            foreach (var item in array)
             {
                 if (item == '1' || item == '0')
                 {
-                //    Console.WriteLine("Entro al if");
                     contador++;
                 }
             }
-
-            if (contador == binario.Length)
+            if (contador == array.Length)
             {
-             //   return "Valor correcto";
-                //conversion
-                //return;
+                return true;
             }
-            
-
-            return "Valor inválido";
+            return false;
         }
 
+
+
+        public static string BinarioDecimal(string binario)
+        {
+            string salida = "Valor inválido";
+            if (EsBinario(binario))
+            {
+                char[] array = binario.ToCharArray();
+                Array.Reverse(array);
+
+                double sum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (array[i] == '1')
+                    {
+                        sum += (int)Math.Pow(2, i);
+                    }
+                }
+                salida = sum.ToString(); ;
+            }
+            return salida;
+        }
+
+
+
+       public static string DecimalBinario(double numero)
+        {
+            string resultado = "";
+            int numeroEntero = (int)numero;
+
+            if (numeroEntero > 0)
+            {
+                while (numeroEntero > 0)
+                {
+                    if (numeroEntero % 2 == 0)
+                    {
+                        resultado = "0" + resultado;
+                    }
+                    else
+                    {
+                        resultado = "1" + resultado;
+                    }
+                   numeroEntero = numeroEntero / 2;
+                }
+            }
+            else
+            {
+                if (numeroEntero == 0)
+                {
+                    resultado = "0";
+                }
+                else
+                {
+                    resultado = "Valor invalido";
+                }
+            }
+            return resultado;
+        }
+
+        public static string DecimalBinario(string numero)
+        {
+            return DecimalBinario(double.Parse(numero));
+        }
 
 
         #endregion
