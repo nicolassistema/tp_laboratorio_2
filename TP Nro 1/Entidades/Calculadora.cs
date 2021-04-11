@@ -11,53 +11,37 @@ namespace Entidades
 
         private static string ValidarOperador(char operador)
         {
-            switch (operador)
-            {
-                case '+':
-                    return Char.ToString(operador);
-                    break;
-                case '-':
-                    return Char.ToString(operador);
-                    break;
-                case '*':
-                    return Char.ToString(operador);
-                    break;
-                case '/':
-                    return Char.ToString(operador);
-                    break;
-                default:
-                    return Char.ToString('+');
-                    break;
-            }
-        }
+            string resultado = "+";
 
+            if (operador == '+' || operador == '-' || operador == '*' || operador == '/')
+            {
+                return Convert.ToString(operador);
+            }
+            return  resultado;
+        }
 
 
         public static double Operar(Numero num1, Numero num2, string operador)
         {
-            
-
-            
-            switch (ValidarOperador(char.Parse(operador)))
+            double resultado = 0;
+            switch (ValidarOperador(Convert.ToChar(operador)))
             {
                 case "+":
-                    return (num1 + num2);
+                    resultado = (num1 + num2);
                     break;
                 case "-":
-                    return (num1 - num2);
+                    resultado = (num1 - num2);
                     break;
                 case "*":
-                    return (num1 * num2);
+                    resultado = (num1 * num2);
                     break;
                 case "/":
-                    return (num1 / num2);
-                    break;
-                default:
-                    return 0;
+                    resultado = (num1 / num2);
                     break;
             }
-           
+            return resultado;
         }
+
 
 
 

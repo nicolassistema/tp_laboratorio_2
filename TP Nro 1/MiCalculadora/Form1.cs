@@ -18,40 +18,79 @@ namespace MiCalculadora
             InitializeComponent();
             txtNumero1.TextAlign = HorizontalAlignment.Center;
             txtNumero2.TextAlign = HorizontalAlignment.Center;
-           // lblResultado.AutoSize = false;
-          //  lblResultado.TextAlign = ContentAlignment.MiddleLeft;
-            
-
-
-
+            lblResultado.Text = "Resultado";
 
 
         }
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            Numero num1 = new Numero(txtNumero1.Text);
-            Numero num2 = new Numero(txtNumero2.Text);
-            double resultado;
 
-            resultado = Calculadora.Operar(num1, num2, cmbOperador.Text);
+
+            double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
             lblResultado.Text = resultado.ToString();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtNumero1.Text = "";
-            txtNumero2.Text = "";
-            cmbOperador.Text = "";
-            lblResultado.Text = "0";
+            Limpiar();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             FormCalculadora mv = new FormCalculadora();
-            this.Close();
+            Dispose();
+            //dispose
         }
 
-      
+       private void Limpiar()
+        {
+            txtNumero1.Text = string.Empty;
+            txtNumero2.Text = string.Empty;
+            cmbOperador.SelectedIndex = -1;
+            lblResultado.Text = "0";
+            btnConvertirABinario.Enabled = true;
+            btnConvertirADecimal.Enabled = true;
+        }
+
+
+        static double Operar(string  num1, string num2, string operador)
+        {
+            Numero numA1 = new Numero(num1);
+            Numero numA2 = new Numero(num2);
+
+            if (String.IsNullOrEmpty(operador))
+            {
+                operador = "+";
+            }
+
+            double resultado = Calculadora.Operar(numA1, numA2, operador);
+            return resultado;
+        }
+
+
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+            if (lblResultado.Text != "Valor invalido" || lblResultado.Text != "Resultado")
+            {
+                 lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
+            }
+
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = true;
+        }
+
+        private void btnConvertirADecimal_Click(object sender, EventArgs e)
+        {
+            lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
+            btnConvertirABinario.Enabled = true;
+            btnConvertirADecimal.Enabled = false;
+        }
+
+     
+
+
+
+   
     }
 }

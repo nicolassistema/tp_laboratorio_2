@@ -37,11 +37,26 @@ namespace Entidades
                 this.numero = ValidarNumero(value);
             }
         }
+
+      public double   GetNumero()
+        {
+          
+            return this.numero;
+        }
+
         #endregion
 
         #region "metodos varios"
+
+
+      
+
+
         private static double ValidarNumero(string strNumero)
         {
+           
+            strNumero = strNumero.Replace(".", ",");
+      
             double auxNumero;
 
             if (!double.TryParse(strNumero, out auxNumero))
@@ -57,27 +72,21 @@ namespace Entidades
         public static bool EsBinario(string binario)
         {
             char[] array = binario.ToCharArray();
-            int contador = 0;
-
             foreach (var item in array)
             {
-                if (item == '1' || item == '0')
+                if (item != '1' && item != '0')
                 {
-                    contador++;
+                    return false;
                 }
             }
-            if (contador == array.Length)
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
 
 
 
         public static string BinarioDecimal(string binario)
         {
-            string salida = "Valor inválido";
+            string salida = "Valor invalido";
             if (EsBinario(binario))
             {
                 char[] array = binario.ToCharArray();
@@ -101,6 +110,7 @@ namespace Entidades
        public static string DecimalBinario(double numero)
         {
             string resultado = "";
+            numero = Math.Abs(numero);
             int numeroEntero = (int)numero;
 
             if (numeroEntero > 0)
@@ -134,6 +144,12 @@ namespace Entidades
 
         public static string DecimalBinario(string numero)
         {
+            double auxNumero;
+
+            if (!double.TryParse(numero, out auxNumero))
+            {
+                return "Valor invalido";
+            }
             return DecimalBinario(double.Parse(numero));
         }
 

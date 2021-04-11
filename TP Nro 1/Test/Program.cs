@@ -22,6 +22,10 @@ namespace Entidades
             Console.WriteLine(10 - 10);
             Console.WriteLine(10 / 1);
             Console.WriteLine(10 * 10);
+
+
+
+
          
 
             //Console.ReadKey();
