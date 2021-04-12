@@ -19,14 +19,11 @@ namespace MiCalculadora
             txtNumero1.TextAlign = HorizontalAlignment.Center;
             txtNumero2.TextAlign = HorizontalAlignment.Center;
             lblResultado.Text = "Resultado";
-
-
         }
+
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-
-
             double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
             lblResultado.Text = resultado.ToString();
         }
@@ -36,14 +33,15 @@ namespace MiCalculadora
             Limpiar();
         }
 
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             FormCalculadora mv = new FormCalculadora();
             Dispose();
-            //dispose
         }
 
-       private void Limpiar()
+
+        private void Limpiar()
         {
             txtNumero1.Text = string.Empty;
             txtNumero2.Text = string.Empty;
@@ -54,7 +52,7 @@ namespace MiCalculadora
         }
 
 
-        static double Operar(string  num1, string num2, string operador)
+        static double Operar(string num1, string num2, string operador)
         {
             Numero numA1 = new Numero(num1);
             Numero numA2 = new Numero(num2);
@@ -63,7 +61,6 @@ namespace MiCalculadora
             {
                 operador = "+";
             }
-
             double resultado = Calculadora.Operar(numA1, numA2, operador);
             return resultado;
         }
@@ -73,24 +70,20 @@ namespace MiCalculadora
         {
             if (lblResultado.Text != "Valor invalido" || lblResultado.Text != "Resultado")
             {
-                 lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
+                lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
             }
-
+            //Genero alternancia de habilitacion entre los botones convertir
             btnConvertirABinario.Enabled = false;
             btnConvertirADecimal.Enabled = true;
         }
 
+
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
+            //Genero alternancia de habilitacion entre los botones convertir
             btnConvertirABinario.Enabled = true;
             btnConvertirADecimal.Enabled = false;
         }
-
-     
-
-
-
-   
     }
 }
