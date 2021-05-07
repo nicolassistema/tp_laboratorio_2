@@ -10,26 +10,20 @@ namespace Entidades
 {
     public class Sedan : Vehiculo
     {
-        
-        public enum ETipo 
-        { 
-            CuatroPuertas,  
+
+        public enum ETipo
+        {
+            CuatroPuertas,
             CincoPuertas
         }
         ETipo tipo;
 
-        /// <summary>
-        /// Por defecto, TIPO será CuatroPuertas
-        /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="chasis"></param>
-        /// <param name="color"></param>
-        public Sedan( EMarca marca, string chasis, ConsoleColor color) : base(marca, chasis,   color)
+        public Sedan(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
-           
+            tipo = ETipo.CuatroPuertas;
         }
 
-        public Sedan( EMarca marca, string chasis, ConsoleColor color, ETipo tipo) : this(marca, chasis, color)
+        public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo) : base(chasis, marca, color)
         {
             this.tipo = tipo;
         }
@@ -42,9 +36,10 @@ namespace Entidades
         {
             get
             {
-                return this.Tamanio;
+                return Vehiculo.ETamanio.Mediano;
             }
         }
+
 
         public override sealed string Mostrar()
         {
@@ -59,6 +54,7 @@ namespace Entidades
 
             return sb.ToString();
         }
+
 
     }
 }

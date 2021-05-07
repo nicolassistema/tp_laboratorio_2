@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
-        public Ciclomotor( EMarca marca, string chasis, ConsoleColor color) : base(marca, chasis,  color)
+        public Ciclomotor( EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
         }
         
@@ -19,7 +19,7 @@ namespace Entidades
         {
             get
             {
-                return this.Tamanio;
+                return Vehiculo.ETamanio.Chico;
             }
         }
 

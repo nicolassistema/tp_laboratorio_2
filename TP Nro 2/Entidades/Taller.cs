@@ -24,12 +24,12 @@ namespace Entidades
         }
 
         #region "Constructores"
-     
+
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
-        public Taller(int espacioDisponible):this()
+        public Taller(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
         }
@@ -95,7 +95,9 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            if (taller.vehiculos.Count < taller.espacioDisponible && taller != null && vehiculo != null)
+
+            // if (taller.vehiculos.Count < taller.espacioDisponible && !(taller is null) && !(vehiculo is null))
+            if (taller.vehiculos.Count < taller.espacioDisponible)
             {
                 foreach (Vehiculo v in taller.vehiculos)
                 {
@@ -118,17 +120,20 @@ namespace Entidades
         /// <param name="vehiculo">Objeto a quitar</param>
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
-    {
-        foreach (Vehiculo v in taller.vehiculos)
         {
-            if (v == vehiculo)
+            if (taller.vehiculos.Count > 0 && !(taller is null) && !(vehiculo is null))
             {
-                taller.vehiculos.Remove(vehiculo);
-                break;
+                foreach (Vehiculo v in taller.vehiculos)
+                {
+                    if (v == vehiculo)
+                    {
+                        taller.vehiculos.Remove(vehiculo);
+                        break;
+                    }
+                }
             }
+            return taller;
         }
-        return taller;
+        #endregion
     }
-    #endregion
-}
 }

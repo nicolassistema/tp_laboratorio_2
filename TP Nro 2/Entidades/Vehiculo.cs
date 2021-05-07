@@ -28,7 +28,7 @@ namespace Entidades
         private string chasis;
         private ConsoleColor color;
 
-        protected Vehiculo(EMarca marca, string chasis, ConsoleColor color)
+        protected Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.marca = marca;
             this.chasis = chasis;
@@ -72,10 +72,10 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-           
             if ((!(v1 is null))&& (!(v2 is null)))
             {
-            return (v1.chasis == v2.chasis);
+          //  return (v1.chasis == v2.chasis);
+                return v1.chasis.Equals(v2.chasis);
             }
             return false;
         }
@@ -87,7 +87,6 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
-        
             return !(v1 == v2);
         }
     }
