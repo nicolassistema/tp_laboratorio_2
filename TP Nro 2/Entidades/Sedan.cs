@@ -18,19 +18,34 @@ namespace Entidades
         }
         ETipo tipo;
 
+        #region Constructores
+        /// <summary>
+        /// Por defecto, TIPO será CuatroPuertas
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
             tipo = ETipo.CuatroPuertas;
         }
 
+        /// <summary>
+        /// Esta sobrecarga permite seleccionar tipo
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        /// <param name="tipo"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo) : base(chasis, marca, color)
         {
             this.tipo = tipo;
         }
+        #endregion
 
-
+        #region Properties
         /// <summary>
-        /// Sedan son 'Mediano'
+        /// Los automoviles son medianos
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -39,8 +54,15 @@ namespace Entidades
                 return Vehiculo.ETamanio.Mediano;
             }
         }
+        #endregion
 
 
+        #region Sobrecargas
+
+        /// <summary>
+        /// Crea un stringbuilder con todos los datos del vehiculo
+        /// </summary>
+        /// <returns>un string con todos los datos</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -54,7 +76,6 @@ namespace Entidades
 
             return sb.ToString();
         }
-
-
+        #endregion
     }
 }

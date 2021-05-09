@@ -8,12 +8,26 @@ namespace Entidades
 {
     public class Suv : Vehiculo
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color) : base(  chasis, marca, color)
+
+        #region Constructor
+
+        /// <summary>
+        /// Cconstructor
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Suv(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
 
         }
+        #endregion
+
+
+        #region Properties
+
         /// <summary>
-        /// SUV son 'Grande'
+        /// Las camionetas son grandes
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -22,7 +36,14 @@ namespace Entidades
                 return Vehiculo.ETamanio.Grande;
             }
         }
+        #endregion
 
+        #region Sobrecargas
+
+        /// <summary>
+        /// Crea un stringbuilder con todos los datos del vehiculo
+        /// </summary>
+        /// <returns>un string con todos los datos</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -35,5 +56,6 @@ namespace Entidades
 
             return sb.ToString();
         }
+        #endregion
     }
 }

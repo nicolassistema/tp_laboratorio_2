@@ -14,7 +14,7 @@ namespace Entidades
         private int espacioDisponible;
         private List<Vehiculo> vehiculos;
 
-
+        #region Enumerados
         public enum ETipo
         {
             Moto,
@@ -22,13 +22,25 @@ namespace Entidades
             Camioneta,
             Todos
         }
+        #endregion
 
-        #region "Constructores"
+
+
+        #region Constructores
+
+        /// <summary>
+        /// Constructor por defecto
+        /// </summary>
 
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
+
+        /// <summary>
+        /// Contructor parametrizado, recibe espacio disponible
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Taller(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
